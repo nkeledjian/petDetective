@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Detective</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Pet Detective</h1>
+      <h3></h3>
+      <hr>
+      <a href="/about" class="btn btn-danger btn-lg">
+        <span class="fa fa-eye"></span> About Us</a>
+      <a href="/add" class="btn btn-danger btn-lg">
+      <span class="fa fa-eye"></span> Report a Lost Pet</a>
+      <a href="/found" class="btn btn-danger btn-lg">
+        <span class="fa fa-eye"></span> Report a Found Pet</a>
+      <a href="/all" class="btn btn-danger btn-lg">
+      <span class="fa fa-th-list"></span>Look through posts </a>
+      <a href="/donate" class="btn btn-danger btn-lg">
+        <span class="fa fa-th-list"></span>Donate! </a>
+  </div>
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="card">
+          <div class="card-header">
+            Information Needed:
+          </div>
+          <div class="card-body">
+            <form action="" method="POST" role="form">
+
+              <div class="form-group">
+                <label for="">Your Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="">
+              </div>
+
+              <div class="form-group">
+                <label for="">Your Contact Info:</label>
+                <input type="text" class="form-control" id="number" placeholder="">
+              </div>
+
+              <div class="form-group">
+                <label for="">Type of Pet Found:</label>
+                <input type="text" class="form-control" id="petType" placeholder="ex: dog, cat, bird">
+              </div>
+
+              <div class="form-group">
+                <label for="">Color of Pet:</label>
+                <input type="text" class="form-control" id="petColor" placeholder="ex: black/white/two or more">
+              </div>
+
+              <div class="form-group">
+                <label for="">Estimated Size of Pet</label>
+                <input type="text" class="form-control" id="petSize" placeholder="ex: small/medium/large">
+              </div>
+
+            </form>
+            <br>
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary btn-md" id="add-btn">
+                <span class="fa fa-fire"></span> Submit</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/found.js" type="text/javascript"></script>
+
+</body>
+
+</html>
