@@ -14,6 +14,8 @@ var Pet = sequelize.define("pet", {
   name: Sequelize.STRING,
   // the character's role (a string)
   number: Sequelize.STRING,
+
+  address:Sequelize.STRING, 
   // the character's age (a string)
   petType: Sequelize.STRING,
   
