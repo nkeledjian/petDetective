@@ -11,6 +11,7 @@ $("#add-btn").on("click", function(event) {
     name: $("#name").val().trim(),
     // role from role input
     number: $("#number").val().trim(),
+    address: $("#address").val().trim(),
     // age from age input
     petType: $("#petType").val().trim(),
     // points from force-points input

@@ -30,6 +30,7 @@ $("#search-btn").on("click", function() {
       $("#well-section").append("<h2>Name:" + data.name + "</h2>");
       // the role
       $("#well-section").append("<h3>Number: " + data.number + "</h3>");
+      $("#well-section").append("<h3>Location: " + data.address + "</h3>");
       // the age
       $("#well-section").append("<h3>petType: " + data.petType + "</h3>");
       // and the force points
