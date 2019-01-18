@@ -35,6 +35,7 @@ $("#add-btn").on("click", function(event) {
   // empty each input box by replacing the value with an empty string
   $("#name").val("");
   $("#number").val("");
+  $("#address").val("");
   $("#petType").val("");
   $("#petColor").val("");
   $("#petColor").val("");
