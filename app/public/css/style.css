@@ -1,0 +1,23 @@
+.jumbotron {
+    background-image: url('./img/images.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 500px;
+    display: block;
+}
+
+
+body {
+    background-image: url("./img/rose-elena-502559-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Abril Fatface', cursive;
+   }
+
+   footer {
+    position: relative;
+    margin-top: 20px;
+    top: 100px;
+    padding: 2%;
+}
