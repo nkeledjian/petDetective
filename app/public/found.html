@@ -11,7 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
-
+  <script src="/keys.js"></script>
 </head>
 
 <body>
@@ -143,38 +143,7 @@
             </div>
           </footer>
           <script src="js/found.js" type="text/javascript"></script>
-          <script src="../../keys.js"></script>
-          <!-- Filestack functionality START -->
-          <script>
-            const filestackKey = keys.filestack
-            const petImage = document.getElementById('pet-image-url');
-
-            window.addEventListener('DOMContentLoaded', function () {
-              const apikey = filestackKey.key;
-              const client = filestack.init(apikey);
-
-              const onProgress = (evt) => {
-                document.getElementById('progress').innerHTML = `${evt.totalPercent}%`;
-              };
-
-              document.querySelector('input').addEventListener('change', (event) => {
-                const files = event.target.files;
-                const file = files.item(0);
-                const token = {};
-                
-                client.upload(file, { onProgress }, {}, token)
-                  .then(res => {
-                    console.log('success: ', res)
-                    petImage.innerHTML += "Copy and paste this URL into the image URL field below -->  " + res.url
-                  })
-                  .catch(err => {
-                    console.log(err)
-                  });
-              });
-            });
-          </script>
-          <!-- Filestack functionality END -->
-
+          <script src="js/photoApi.js" type="text/javascript"></script>
 </body>
 
 </html>
