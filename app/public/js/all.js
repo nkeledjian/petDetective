@@ -21,6 +21,8 @@ $.get("/api", function (data) {
     $("#pet-well-" + i).append("<h2>Name:" + data[i].name + "</h2>");
     // the role an h3,
     $("#pet-well-" + i).append("<h3>Number: " + data[i].number + "</h3>");
+    
+    $("#pet-well-" + i).append("<h3>Location: " + data[i].address + "</h3>");
     // the age an h3,
     $("#pet-well-" + i).append("<h3>petType: " + data[i].petType + "</h3>");
     // the pet color an h3.

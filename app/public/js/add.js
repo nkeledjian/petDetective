@@ -11,6 +11,7 @@ $("#add-btn").on("click", function(event) {
     name: $("#name").val().trim(),
     // role from role input
     number: $("#number").val().trim(),
+    address: $("#address").val().trim(),
     // age from age input
     petType: $("#petType").val().trim(),
     // points from force-points input
@@ -34,6 +35,7 @@ $("#add-btn").on("click", function(event) {
   // empty each input box by replacing the value with an empty string
   $("#name").val("");
   $("#number").val("");
+  $("#address").val("");
   $("#petType").val("");
   $("#petColor").val("");
   $("#petColor").val("");
