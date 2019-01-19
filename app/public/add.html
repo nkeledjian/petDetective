@@ -140,8 +140,7 @@
 
   <script>
     // var filestackKey = keys.filestack
-    var petImage = document.getElementById('pet-image-url');
-
+    
     window.addEventListener('DOMContentLoaded', function () {
 
       const apikey = '';
@@ -159,16 +158,17 @@
         client.upload(file, { onProgress }, {}, token)
           .then(res => {
             console.log('success: ', res)
-            petImage.innerHTML += "Copy and paste this URL into the image URL field below -->  " + res.url
+            // petImage.innerHTML += "Copy and paste this URL into the image URL field below -->  " + res.url
+            var petUrl = res.url
+            var petImgDiv = $('<div>')
             
-            // var petUrl = res.url
+            var petImgField = $('<img>')
+            petImgField.attr('src', petUrl)
+            petImgField.attr('style', 'width: 250px')
+            petImgField.attr('style', 'height: 250px')
 
-            // var petImgField = $('<img>')
-            // petImgField.attr('src', petUrl)
-            // petImgField.attr('style', 'width: 250px')
-            // petImgField.attr('style', 'height: 250px')
-
-            // petImage.innerHTML += petImgField
+            petImgDiv.append(petImgField)
+            $('#pet-image-url').append(petImgDiv)
             
           })
           .catch(err => {
