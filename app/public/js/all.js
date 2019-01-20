@@ -16,7 +16,7 @@ $.get("/api", function (data) {
     $("#well-section").append(wellSection);
 
     // Now add all of our pet data to the well we just placed on the page
-    $("#pet-well-" + i).append("<div><img src=" + data[i].petImgUrl + " style='width: 250px', style='height: 250px'></div>");
+    $("#pet-well-" + i).append("<div><img src=" + data[i].petImgUrl + " style='width: 250px;'></div>");
     // make the name an h2,
     $("#pet-well-" + i).append("<h2>Name:" + data[i].name + "</h2>");
     // the role an h3,

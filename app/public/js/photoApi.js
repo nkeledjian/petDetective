@@ -33,7 +33,8 @@ var petImage = document.getElementById('pet-image-url');
 
             petImgDiv.append(petImgField)
             $('#pet-image-url').append(petImgDiv)
-            $('input > #petImgUrl').append(petImgUrl)
+            $('#petImgUrl').append(petImgUrl)
+
           })
           .catch(err => {
             console.log(err)
