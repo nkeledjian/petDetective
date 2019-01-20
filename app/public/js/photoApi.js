@@ -2,11 +2,11 @@
 // require("dotenv").config();
 
 // var filestackKey = keys.filestack
-var petImage = document.getElementById('pet-image-url');
 
     window.addEventListener('DOMContentLoaded', function () {
 
-      const apikey = 'AeIlL0LLISMeCsfFEI96Dz';
+      // const apikey = filestackKey;
+      const apikey = '';
       const client = filestack.init(apikey);
 
       const onProgress = (evt) => {
@@ -21,20 +21,25 @@ var petImage = document.getElementById('pet-image-url');
         client.upload(file, { onProgress }, {}, token)
           .then(res => {
             console.log('success: ', res)
-            // petImage.innerHTML += "Copy and paste this URL into the image URL field below -->  " + res.url
 
+            // store image url data in petImgUrl
             var petImgUrl = res.url
+            // render div tag for img tag
             var petImgDiv = $('<div>')
-            
+            // render img tag with attributes
             var petImgField = $('<img>')
             petImgField.attr('src', petImgUrl)
+            petImgField.attr('value', petImgUrl)
             petImgField.attr('style', 'width: 250px')
             petImgField.attr('style', 'height: 250px')
 
+            // append img tag to div
             petImgDiv.append(petImgField)
+            // append img populated div to div with id pet-image-url 
             $('#pet-image-url').append(petImgDiv)
-            $('#petImgUrl').append(petImgUrl)
-
+            // populate the input field with the image URL to submit to sql database
+            $('#petImgUrl').val(petImgUrl)
+                       
           })
           .catch(err => {
             console.log(err)
