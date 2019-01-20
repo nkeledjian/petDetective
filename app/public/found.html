@@ -11,7 +11,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <!-- Filestack CDN & js file -->
   <script src="//static.filestackapi.com/filestack-js/1.x.x/filestack.min.js"></script>
+  <script src="js/photoApi.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -81,18 +83,27 @@
                       <form action="" method="POST" role="form">
 
                         <!-- Filestack image uploader START-->
-                        <div class="card" style="margin-bottom: 5px">
-                          <div class="card-header">
-                            Upload Pet Photo
-                          </div>
-                          <div class="card-body">
-                            <input type="file" />
-                            <div>Progress: <span id="progress"></span></div>
-                            <!-- display image url -->
-                            <div id="pet-image-url"></div>
-                          </div>
+                    <div class="card" style="margin-bottom: 5px">
+                      <div class="card-header">
+                        Upload Pet Photo
+                      </div>
+                      <div class="card-body">
+                        <input type="file" />
+                        <div>Progress: <span id="progress"></span>
                         </div>
-                        <!-- Filestack image uploader END-->
+
+                        <!-- display pet image -->
+                        <div id="pet-image-url"></div>
+
+                        <!-- populate pet Url field for sql database -->
+                        <div class="form-group">
+                          <label for="">Pet Url:</label>
+                          <input type="text" class="form-control" id="petImgUrl">
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <!-- Filestack image uploader END-->
 
                         <div class="form-group">
                           <label for="">Pet Name:</label>
@@ -143,7 +154,7 @@
             </div>
           </footer>
           <script src="js/found.js" type="text/javascript"></script>
-          <script src="js/photoApi.js" type="text/javascript"></script>
+          
 </body>
 
 </html>
