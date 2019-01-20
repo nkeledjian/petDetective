@@ -8,18 +8,13 @@ $("#add-btn").on("click", function(event) {
   // make a newCharacter obj
   var newPet = {
     // name from name input
+    petImgUrl: $("#petImgUrl").val().trim(),
     name: $("#name").val().trim(),
-    // role from role input
     number: $("#number").val().trim(),
     address: $("#address").val().trim(),
-    // age from age input
     petType: $("#petType").val().trim(),
-    // points from force-points input
     petColor: $("#petColor").val().trim(),
-
     petSize: $("#petSize").val().trim(),
-
-
   };
 
   // send an AJAX POST-request with jQuery
@@ -40,6 +35,4 @@ $("#add-btn").on("click", function(event) {
   $("#petColor").val("");
   $("#petColor").val("");
   $("#petSize").val("");
-
-
 });

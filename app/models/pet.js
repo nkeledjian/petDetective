@@ -8,6 +8,7 @@ var sequelize = require("../config/connection.js");
 
 // Creates a "Character" model that matches up with DB
 var Pet = sequelize.define("pet", {
+  petImgUrl: Sequelize.STRING,
   // the routeName gets saved as a string
   routeName: Sequelize.STRING,
   // the name of the character (a string)

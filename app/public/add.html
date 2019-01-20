@@ -12,7 +12,6 @@
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <script src="//static.filestackapi.com/filestack-js/1.x.x/filestack.min.js"></script>
-  <!-- <script src="../../keys.js"></script> -->
 </head>
 
 <body>
@@ -83,8 +82,14 @@
                   <input type="file" />
                   <div>Progress: <span id="progress"></span>
                   </div>
+
                   <!-- display image url -->
                   <div id="pet-image-url"></div>
+                  <!-- populate pet Url field for sql database -->
+                  <div class="form-group">
+                      <label for="">Pet Url:</label>
+                      <input type="text" class="form-control" id="petImgUrl" placeholder="">
+                    </div>
                 </div>
               </div>
               <!-- Filestack image uploader END-->
@@ -137,46 +142,8 @@
     </div>
   </footer>
   <script src="js/add.js" type="text/javascript"></script>
+  <script src="js/photoApi.js" type="text/javascript"></script>
 
-  <script>
-    // var filestackKey = keys.filestack
-    
-    window.addEventListener('DOMContentLoaded', function () {
-
-      const apikey = '';
-      const client = filestack.init(apikey);
-
-      const onProgress = (evt) => {
-        document.getElementById('progress').innerHTML = `${evt.totalPercent}%`;
-      };
-
-      document.querySelector('input').addEventListener('change', (event) => {
-        const files = event.target.files;
-        const file = files.item(0);
-        const token = {};
-        
-        client.upload(file, { onProgress }, {}, token)
-          .then(res => {
-            console.log('success: ', res)
-            // petImage.innerHTML += "Copy and paste this URL into the image URL field below -->  " + res.url
-            var petUrl = res.url
-            var petImgDiv = $('<div>')
-            
-            var petImgField = $('<img>')
-            petImgField.attr('src', petUrl)
-            petImgField.attr('style', 'width: 250px')
-            petImgField.attr('style', 'height: 250px')
-
-            petImgDiv.append(petImgField)
-            $('#pet-image-url').append(petImgDiv)
-            
-          })
-          .catch(err => {
-            console.log(err)
-          });
-      });
-    });
-  </script>
 
 </body>
 
