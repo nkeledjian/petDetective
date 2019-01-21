@@ -1,12 +1,7 @@
-// var keys = require("../../keys.js")
-// require("dotenv").config();
-
-// var filestackKey = keys.filestack
+var filestackKey = keys.filestack;
 
     window.addEventListener('DOMContentLoaded', function () {
-
-      // const apikey = filestackKey;
-      const apikey = '';
+      const apikey = filestackKey;
       const client = filestack.init(apikey);
 
       const onProgress = (evt) => {
