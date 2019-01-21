@@ -27,7 +27,7 @@ $("#search-btn").on("click", function() {
     else {
       // otherwise
       // append the pet photo
-      $("#well-section").append("<h2>Name:" + data.petImgUrl + "</h2>");
+      $("#well-section").append("<div><img src=" + data.petImgUrl + " style='width: 250px;'></div>");
       // append the character name
       $("#well-section").append("<h2>Name:" + data.name + "</h2>");
       // the contact number
