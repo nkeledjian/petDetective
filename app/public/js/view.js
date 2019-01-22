@@ -26,16 +26,19 @@ $("#search-btn").on("click", function() {
     }
     else {
       // otherwise
+      // append the pet photo
+      $("#well-section").append("<div><img src=" + data.petImgUrl + " style='width: 250px;'></div>");
       // append the character name
       $("#well-section").append("<h2>Name:" + data.name + "</h2>");
-      // the role
+      // the contact number
       $("#well-section").append("<h3>Number: " + data.number + "</h3>");
+      // general address of person to contact
       $("#well-section").append("<h3>Location: " + data.address + "</h3>");
-      // the age
+      // the type of pet
       $("#well-section").append("<h3>petType: " + data.petType + "</h3>");
-      // and the force points
+      // pet's color
       $("#well-section").append("<h3>petColor: " + data.petColor + "</h3>");
-
+      // relative size
       $("#well-section").append("<h3>petSize: " + data.petSize + "</h3>");
     }
   });

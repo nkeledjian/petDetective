@@ -11,7 +11,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
-
+  <!-- Filestack CDN & js file -->
+  <script src="//static.filestackapi.com/filestack-js/1.x.x/filestack.min.js"></script>
+  <script src="js/photoApi.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -65,72 +67,94 @@
       <div class="col-lg-12">
         <div class="card">
           <div class="card-header">
-            Information Needed:
+            <h2>Report a Found Pet:</h2>
           </div>
           <div class="card-body">
             <form action="" method="POST" role="form">
-                <div class="row">
+              <div class="row">
 
-                  <div class="col-lg-12">
+                <div class="col-lg-12">
 
-                    <div class="card">
+                  <div class="card">
+                    <div class="card-header">
+                      Information Needed:
+                    </div>
+                    <div class="card-body">
+                      <form action="" method="POST" role="form">
+
+                        <!-- Filestack image uploader START-->
+                    <div class="card" style="margin-bottom: 5px">
                       <div class="card-header">
-                        Information Needed:
+                        Upload Pet Photo
                       </div>
                       <div class="card-body">
-                        <form action="" method="POST" role="form">
+                        <input type="file" />
+                        <div>Progress: <span id="progress"></span>
+                        </div>
 
-                          <div class="form-group">
-                            <label for="">Pet Name:</label>
-                            <input type="text" class="form-control" id="name" placeholder="">
-                          </div>
+                        <!-- display pet image -->
+                        <div id="pet-image-url"></div>
 
-                          <div class="form-group">
-                            <label for="">Your Contact Info:</label>
-                            <input type="text" class="form-control" id="number" placeholder="phone number/what's app/etc.">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Location:</label>
-                            <input type="text" class="form-control" id="address" placeholder="">
-                          </div>
-
-                          <div class="form-group">
-                            <label for="">Type of Pet Found:</label>
-                            <input type="text" class="form-control" id="petType" placeholder="ex: dog, cat, bird">
-                          </div>
-
-                          <div class="form-group">
-                            <label for="">Color of Pet:</label>
-                            <input type="text" class="form-control" id="petColor" placeholder="ex: black/white/two or more">
-                          </div>
-
-                          <div class="form-group">
-                            <label for="">Estimated Size of Pet</label>
-                            <input type="text" class="form-control" id="petSize" placeholder="ex: small/medium/large">
-                          </div>
-                          
-                          <br>
-                          <div class="text-right">
-                            <button type="submit" class="btn btn-primary btn-md" id="add-btn">
-                              <span class="fa fa-fire"></span> Submit</button>
-                          </div>
-                        </form>
+                        <!-- populate pet Url field for sql database -->
+                        <div class="form-group">
+                          <label for="">Pet Url:</label>
+                          <input type="text" class="form-control" id="petImgUrl">
+                        </div>
+                        
                       </div>
                     </div>
+                    <!-- Filestack image uploader END-->
 
+                        <div class="form-group">
+                          <label for="">Pet Name:</label>
+                          <input type="text" class="form-control" id="name" placeholder="">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="">Your Contact Info:</label>
+                          <input type="text" class="form-control" id="number" placeholder="phone number/what's app/etc.">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Location:</label>
+                          <input type="text" class="form-control" id="address" placeholder="">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="">Type of Pet Found:</label>
+                          <input type="text" class="form-control" id="petType" placeholder="ex: dog, cat, bird">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="">Color of Pet:</label>
+                          <input type="text" class="form-control" id="petColor" placeholder="ex: black/white/two or more">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="">Estimated Size of Pet</label>
+                          <input type="text" class="form-control" id="petSize" placeholder="ex: small/medium/large">
+                        </div>
+
+                        <br>
+                        <div class="text-right">
+                          <button type="submit" class="btn btn-primary btn-md" id="add-btn">
+                            <span class="fa fa-fire"></span> Submit</button>
+                        </div>
+                      </form>
+                    </div>
                   </div>
+
                 </div>
               </div>
-          
+          </div>
+
           <!-- footer -->
           <footer class="text-muted bg-dark">
             <div class="container">
               <p class="text-center text-white"> Pet Detective &copy;</p>
             </div>
           </footer>
-
           <script src="js/found.js" type="text/javascript"></script>
-
+          
 </body>
 
 </html>
