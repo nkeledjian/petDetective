@@ -36,5 +36,27 @@ $("#add-btn").on("click", function(event) {
   $("#petColor").val("");
   $("#petColor").val("");
   $("#petSize").val("");
+  
+  
+  $.post("/api/newFound", newfoundPet)
+// on success, run this callback
+.then(function(data) {
+  // log the data we found
+  console.log(data);
+  // tell the user we're adding a character with an alert window
+  alert("Adding information to database");
+});
+
+// empty each input box by replacing the value with an empty string
+// $("pet-status").val("");
+$("#name").val("");
+$("#number").val("");
+$("#address").val("");
+$("#petType").val("");
+$("#petColor").val("");
+$("#petColor").val("");
+$("#petSize").val("");
 
 });
+
+
