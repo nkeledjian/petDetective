@@ -9,20 +9,13 @@ var sequelize = require("../config/connection.js");
 // Creates a "Character" model that matches up with DB
 var Pet = sequelize.define("pet", {
   petImgUrl: Sequelize.STRING,
-  // the routeName gets saved as a string
   routeName: Sequelize.STRING,
-  // the name of the character (a string)
+  petStatus: Sequelize.STRING,
   name: Sequelize.STRING,
-  // the character's role (a string)
   number: Sequelize.STRING,
-
   address:Sequelize.STRING, 
-  // the character's age (a string)
   petType: Sequelize.STRING,
-  
-  // and the character's force points (an int)
   petColor: Sequelize.STRING,
-
   petSize: Sequelize.STRING,
 }, {
   // disable the modification of tablenames; By default, sequelize will automatically

@@ -4,12 +4,11 @@
 // when user clicks add-btn
 $("#add-btn").on("click", function(event) {
   event.preventDefault();
-
   // make a newPet obj
   var newPet = {
     petImgUrl: $("#petImgUrl").val().trim(),
-    // petStatus: $("#pet-status").val("Lost"),
     name: $("#name").val().trim(),
+    petStatus: "Lost",
     number: $("#number").val().trim(),
     address: $("#address").val().trim(),
     petType: $("#petType").val().trim(),
@@ -28,7 +27,6 @@ $("#add-btn").on("click", function(event) {
     });
 
   // empty each input box by replacing the value with an empty string
-  // $("pet-status").val("");
   $("#name").val("");
   $("#number").val("");
   $("#address").val("");

@@ -44,6 +44,7 @@ module.exports = function(app) {
       petImgUrl: pet.petImgUrl,
       routeName: routeName,
       name: pet.name,
+      petStatus: pet.petStatus,
       number: pet.number,
       address: pet.address,
       petType: pet.petType,
