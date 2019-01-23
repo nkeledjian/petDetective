@@ -1,27 +1,22 @@
-// Dependencies
-// =============================================================
-
-module.exports
+module.exports = function (sequelize, DataTypes) {
 // Creates a "Pet" model that matches up with DB
-var Pet = sequelize.define("pet", {
-  petImgUrl: Sequelize.STRING,
-  routeName: Sequelize.STRING,
-  petStatus: Sequelize.STRING,
-  name: Sequelize.STRING,
-  number: Sequelize.STRING,
-  address:Sequelize.STRING, 
-  petType: Sequelize.STRING,
-  petColor: Sequelize.STRING,
-  petSize: Sequelize.STRING,
-}, {
+var Pet = sequelize.define("Pet", {
+  petImgUrl: DataTypes.STRING,
+  routeName: DataTypes.STRING,
+  petStatus: DataTypes.STRING,
+  name: DataTypes.STRING,
+  number: DataTypes.STRING,
+  address:DataTypes.STRING, 
+  petType: DataTypes.STRING,
+  petColor: DataTypes.STRING,
+  petSize: DataTypes.STRING,
+  }, {
   // disable the modification of tablenames; By default, sequelize will automatically
   // transform all passed model names (first parameter of define) into plural.
   // if you don't want that, set the following
   freezeTableName: true
 });
+  return Pet;
+}
 
-// Syncs with DB
-Pet.sync();
 
-// Makes the Pet Model available for other files (will also create a table)
-module.exports = Pet;

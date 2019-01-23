@@ -9,6 +9,7 @@ var filestackKey = keys.filestack;
       // ** using .env **
       // const apikey = new filestack(keys.filestack);
 
+      // using local file
       const apikey = filestackKey;
       const client = filestack.init(apikey);
 

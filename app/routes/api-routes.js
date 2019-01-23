@@ -1,6 +1,4 @@
-// *********************************************************************************
 // api-routes.js - this file offers a set of routes for displaying and saving data to the db
-// *********************************************************************************
 
 // Dependencies
 // =============================================================
@@ -34,11 +32,10 @@ module.exports = function(app) {
     var pet = req.body;
 
     // Create a routeName
-
     // Using a RegEx Pattern to remove spaces from pet.name
     var routeName = pet.name.replace(/\s+/g, "").toLowerCase();
 
-    // Then add the character to the database using sequelize
+    // Then add the pet to the database using sequelize
     db.Pet.create({
       petImgUrl: pet.petImgUrl,
       routeName: routeName,
