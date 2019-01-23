@@ -32,6 +32,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/found.html"));
   });
 
+  app.get("/google", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/google.html"));
+  });
+
   app.get("/donate", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/donate.html"));
   });

@@ -44,6 +44,11 @@
                 <span class="fa fa-eye"></span> Report a Found Pet</a>
               <a href="/all" class="btn text-white">
                 <span class="fa fa-th-list"></span>Look through posts </a>
+              
+              <a href="/google" class="btn text-white">
+                <span class="fa fa-eye"></span> Look Through Community Map</a>
+
+              
               <a href="/donate" class="btn btn-ligth-danger btn-lg">
                 <span class="fa fa-money"></span>Donate! </a>
             </ul>
@@ -117,6 +122,16 @@
               <div class="form-group">
                 <label for="">Location:</label>
                 <input type="text" class="form-control" id="location" placeholder="">
+
+                  <!-- Map -->
+                 <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-7 center-align">
+                      <div id="mapContainer" class="">
+                        <div id="map"></div>
+                      </div>
+                    </div>
+                  </div>
+                  
               </div>
 
               <div class="form-group">
@@ -156,6 +171,12 @@
     </div>
   </div>
 
+    <!-- Map Canvas -->
+    <div id="map-canvas">
+      <h3>Loading.... Please wait...</h3>
+    </div>
+    <!-- Map Canvas end -->
+
   <!-- footer -->
   <footer class="text-muted bg-dark">
     <div class="container">
@@ -164,6 +185,7 @@
   </footer>
   <script src="js/add.js" type="text/javascript"></script>
   <script src="js/maps.js" type="text/javascript"></script>
+  
   
 </body>
 
