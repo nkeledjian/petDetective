@@ -8,6 +8,7 @@ $("#add-btn").on("click", function(event) {
   // make a newCharacter obj
   var foundPet = {
     petImgUrl: $("#petImgUrl").val().trim(),
+    petMapUrl: $("#petMapUrl").val().trim(),
     name: $("#name").val().trim(),
     petStatus: "Found",
     number: $("#number").val().trim(),
@@ -28,6 +29,8 @@ $("#add-btn").on("click", function(event) {
     });
 
   // empty each input box by replacing the value with an empty string
+  $("#petImgUrl").val("");
+  $("#petMapUrl").val("");
   $("#name").val("");
   $("#number").val("");
   $("#address").val("");

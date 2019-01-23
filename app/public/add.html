@@ -14,7 +14,9 @@
   <!-- Filestack CDN & js file -->
   <script src="//static.filestackapi.com/filestack-js/1.x.x/filestack.min.js"></script>
   <script src="js/keys.js" type="text/javascript"></script>
+  <script src="js/keysOne.js" type="text/javascript"></script>
   <script src="js/photoApi.js" type="text/javascript"></script>
+  <script src="js/photoMap.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -91,8 +93,28 @@
 
                   <!-- populate pet Url field for sql database -->
                   <div class="form-group">
-                    <label for="">Pet Url:</label>
+                    <label for="">Pet Map:</label>
                     <input type="text" class="form-control" id="petImgUrl">
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="card" style="margin-bottom: 5px">
+                <div class="card-header">
+                  Upload Photo of location
+                </div>
+                <div class="card-body">
+                  <input type="file" />
+                  <div>Progress: <span id="progress"></span>
+                  </div>
+
+                  <!-- display pet image -->
+                  <div id="pet-map-url"></div>
+
+                  <!-- populate pet Url field for sql database -->
+                  <div class="form-group">
+                    <label for="">Pet Url:</label>
+                    <input type="text" class="form-control" id="petMapUrl">
                   </div>
                   
                 </div>

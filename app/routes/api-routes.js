@@ -42,6 +42,7 @@ module.exports = function(app) {
     // Then add the character to the database using sequelize
     Pet.create({
       petImgUrl: pet.petImgUrl,
+      petMapUrl: pet.petMapUrl,
       routeName: routeName,
       name: pet.name,
       petStatus: pet.petStatus,

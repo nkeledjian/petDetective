@@ -104,7 +104,35 @@
                         
                       </div>
                     </div>
+
+
+
+                    <div class="card-body">
+                      <form action="" method="POST" role="form">
+
+                        <!-- Filestack image uploader START-->
+                    <div class="card" style="margin-bottom: 5px">
+                      <div class="card-header">
+                        Upload location Photo
+                      </div>
+                      <div class="card-body">
+                        <input type="file" />
+                        <div>Progress: <span id="progress"></span>
+                        </div>
+
+                        <!-- display pet image -->
+                        <div id="pet-map-url"></div>
+
+                        <!-- populate pet Url field for sql database -->
+                        <div class="form-group">
+                          <label for="">Pet Url:</label>
+                          <input type="text" class="form-control" id="petMapUrl">
+                        </div>
+                        
+                      </div>
+                    </div>
                     <!-- Filestack image uploader END-->
+                    
                     
                         <div class="form-group">
                           <label for="">Pet Name:</label>
