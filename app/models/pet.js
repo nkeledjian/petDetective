@@ -13,7 +13,7 @@ var Pet = sequelize.define("pet", {
   petStatus: Sequelize.STRING,
   name: Sequelize.STRING,
   number: Sequelize.STRING,
-  address:Sequelize.STRING, 
+  location:Sequelize.STRING, 
   petType: Sequelize.STRING,
   petColor: Sequelize.STRING,
   petSize: Sequelize.STRING,

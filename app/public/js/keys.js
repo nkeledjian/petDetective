@@ -1,5 +1,3 @@
-require("dotenv").config();
-
-exports.filestack = {
-    keys: process.env.filestack_KEY
+var keys = {
+    filestack: 'AeIlL0LLISMeCsfFEI96Dz'
 }

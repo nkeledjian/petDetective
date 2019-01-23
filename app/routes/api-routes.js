@@ -46,7 +46,7 @@ module.exports = function(app) {
       name: pet.name,
       petStatus: pet.petStatus,
       number: pet.number,
-      address: pet.address,
+      location: pet.location,
       petType: pet.petType,
       petColor: pet.petColor,
       petSize: pet.petSize
