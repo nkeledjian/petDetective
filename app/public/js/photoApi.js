@@ -1,7 +1,10 @@
-var filestackKey = keys.filestack;
+require("dotenv").config();
+// var filestackKey = keys.filestack;
+var filestack = require("filestack-js");
 
     window.addEventListener('DOMContentLoaded', function () {
-      const apikey = filestackKey;
+      const apikey = new filestack(keys.filestack);
+      // const apikey = process.env.filestack_KEY;
       const client = filestack.init(apikey);
 
       const onProgress = (evt) => {

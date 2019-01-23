@@ -21,3 +21,9 @@ body {
     top: 100px;
     padding: 2%;
 }
+
+.pet-info{
+    text-align: center;
+    margin-bottom: 10px;
+    border: 2px solid grey;
+}
