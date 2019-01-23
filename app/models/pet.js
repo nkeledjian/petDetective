@@ -1,11 +1,7 @@
 // Dependencies
 // =============================================================
 
-// Sequelize (capital) references the standard library
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references our connection to the DB.
-var sequelize = require("../config/connection.js");
-
+module.exports
 // Creates a "Pet" model that matches up with DB
 var Pet = sequelize.define("pet", {
   petImgUrl: Sequelize.STRING,

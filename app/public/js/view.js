@@ -1,20 +1,19 @@
-// Code here handles queries for specific characters in the database
-// In this case, the user submits a character's name... we then pass that character's name as a
-// URL parameter. Our server then performs the search to grab that character from the Database.
+// Code here handles queries for specific pets in the database
+// In this case, the user submits a pet's name... we then pass that pet's name as a
+// URL parameter. Our server then performs the search to grab that pet from the Database.
 
 // when user hits the search-btn
 $("#search-btn").on("click", function() {
-  // save the character they typed into the character-search input
+  // save the pet they typed into the pet-search input
   var searchedPet = $("#Pet-search")
     .val()
     .trim();
 
-  // Using a RegEx Pattern to remove spaces from searchedCharacter
-  // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+  // Using a RegEx Pattern to remove spaces from searchedPet
   searchedPet = searchedPet.replace(/\s+/g, "").toLowerCase();
 
   // run an AJAX GET-request for our servers api,
-  // including the user's character in the url
+  // including the pet name in the url
   $.get("/api/" + searchedPet, function(data) {
     // log the data to our console
     console.log(data);
@@ -26,17 +25,21 @@ $("#search-btn").on("click", function() {
     }
     else {
       // otherwise
+      // pet status as either lost or found
+      $("#well-section").append("<h3>" + data.petStatus + "</h3>");
       // append the pet photo
       $("#well-section").append("<div><img src=" + data.petImgUrl + " style='width: 250px;'></div>");
-      // append the character name
+      // append the pet name
       $("#well-section").append("<h2>Name: " + data.name + "</h2>");
-      $("#well-section").append("<h3>Pet Status: " + data.petStatus + "</h3>");
+      // a contact number for the lost or found poster
       $("#well-section").append("<h3>Number: " + data.number + "</h3>");
+      // a location input for city, street info, etc.
       $("#well-section").append("<h3>Location: " + data.address + "</h3>");
+      // what kind of pet
       $("#well-section").append("<h3>Pet Type: " + data.petType + "</h3>");
       // pet's color
       $("#well-section").append("<h3>Pet Color: " + data.petColor + "</h3>");
-      // relative size
+      // and relative size
       $("#well-section").append("<h3>Pet Size: " + data.petSize + "</h3>");
       
     }
