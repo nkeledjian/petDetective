@@ -7,7 +7,7 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function(app) {
-  // Search for Specific pet (or all pets) then provides JSON
+  // Searches for Specific pet (or all pets), and then provides JSON
   app.get("/api/:pet?", function(req, res) {
     if (req.params.pet) {
       // Display the JSON for ONLY that pet.
