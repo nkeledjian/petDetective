@@ -1,17 +1,21 @@
+// import { filestack } from "../../../keys";
+
 // ** .env variable setup **
-require("dotenv").config();
+// require("dotenv").config();
+
+var keys = require("../../../keys");
 
 // using local file
 // var filestackKey = keys.filestack;
 
     window.addEventListener('DOMContentLoaded', function () {
       // ** using .env **
-      const apikey = new Filestack(keys.filestack);
+      // const apikey = keys.filestack;
 
       // using local file
       // const apikey = filestackKey;
 
-      const client = filestack.init(apikey);
+      const client = filestack.init(filestack);
 
       const onProgress = (evt) => {
         document.getElementById('progress').innerHTML = `${evt.totalPercent}%`;
