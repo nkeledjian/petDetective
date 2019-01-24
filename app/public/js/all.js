@@ -14,13 +14,14 @@ $.get("/api", function (data) {
     wellSection.attr("id", "pet-well-" + i);
     // append the well to the well section
     $("#well-section").append(wellSection);
+    $("#pet-well-" + i).append("<h2>Name: " + data[i].name + "</h2>");
     // Now add all of our pet data to the well we just placed on the page
     $("#pet-well-" + i).append("<div><img src=" + data[i].petImgUrl + " style='width: 350px;'></div>");
     // make the name an h2,
-    $("#pet-well-" + i).append("<h2>Name: " + data[i].name + "</h2>");
+    
     $("#pet-well-" + i).append("<h3>Pet Status: " + data[i].petStatus + "</h3>");
     // the role an h3,
-    $("#pet-well-" + i).append("<h3>Number: " + data[i].number + "</h3>");
+    
     $("#pet-well-" + i).append("<h3>Location: " + data[i].location + "</h3>");
     // the age an h3,
     $("#pet-well-" + i).append("<h3>Pet Type: " + data[i].petType + "</h3>");
@@ -28,6 +29,7 @@ $.get("/api", function (data) {
     $("#pet-well-" + i).append("<h3>Pet Color: " + data[i].petColor + "</h3>");
     // and the pet size an h3.
     $("#pet-well-" + i).append("<h3>Pet Size: " + data[i].petSize + "</h3>");
+    $("#pet-well-" + i).append("<p>Number: " + data[i].number + "</p>");
     
   }
 });
