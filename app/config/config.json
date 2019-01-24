@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "eshface",
+    "password": "lakers123",
     "database": "petDetective",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "eshface",
+    "password": "",
     "database": "petDetective",
     "host": "localhost",
     "dialect": "mysql",

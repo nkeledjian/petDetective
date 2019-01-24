@@ -3,7 +3,7 @@
 
 // make a get request to our api to grab every pet
 $.get("/api", function (data) {
-
+  console.log('dataaaa', data)
   // for each pet that our server sends us back
   for (var i = 0; i < data.length; i++) {
     // create a parent div for the oncoming elements
@@ -15,18 +15,18 @@ $.get("/api", function (data) {
     // append the well to the well section
     $("#well-section").append(wellSection);
     // Now add all of our pet data to the well we just placed on the page
-    $("#pet-well-" + i).append("<h2>" + data[i].petStatus + "</h2>");
-    $("#pet-well-" + i).append("<div><img src=" + data[i].petImgUrl + " style='width: 350px;'></div>");
     // make the name an h2,
     $("#pet-well-" + i).append("<h2>Name: " + data[i].name + "</h2>");
+    $("#pet-well-" + i).append("<div><img src=" + data[i].petImgUrl + " style='width: 350px;'></div>");
+    $("#pet-well-" + i).append("<h2>" + data[i].petStatus + "</h2>");
     
-    $("#pet-well-" + i).append("<h3>Number: " + data[i].number + "</h3>");
     $("#pet-well-" + i).append("<h3>Address: " + data[i].address + "</h3>");
     $("#pet-well-" + i).append("<h3>Pet Type: " + data[i].petType + "</h3>");
     // the pet color an h3.
     $("#pet-well-" + i).append("<h3>Pet Color: " + data[i].petColor + "</h3>");
     // and the pet size an h3.
     $("#pet-well-" + i).append("<h3>Pet Size: " + data[i].petSize + "</h3>");
+    $("#pet-well-" + i).append("<h5>Number: " + data[i].number + "</h5>");
     
   }
 });
