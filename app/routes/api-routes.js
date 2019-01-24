@@ -12,17 +12,19 @@ module.exports = function(app) {
     if (req.params.pet) {
       // Display the JSON for ONLY that pet.
       // (Note how we're using the ORM here to run our searches)
-      db.Pet.findOne({
+      db.Pet.findAll({
         where: {
-          routeName: req.params.pet,
+          petType: req.params.pet,
         }
       }).then(function(result) {
+        // console.log('hereee',result);
+
         return res.json(result);
       });
-    } else {
-      db.Pet.findAll().then(function(result) {
-        return res.json(result);
-      });
+    // } else {
+    //   db.Pet.findAll().then(function(result) {
+    //     return res.json(result);
+    //   });
     }
   });
 
@@ -33,7 +35,7 @@ module.exports = function(app) {
 
     // Create a routeName
     // Using a RegEx Pattern to remove spaces from pet.name
-    var routeName = pet.name.replace(/\s+/g, "").toLowerCase();
+    var routeName = pet.petType.replace(/\s+/g, "").toLowerCase();
 
     // Then add the pet to the database using sequelize
     db.Pet.create({
