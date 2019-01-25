@@ -13,7 +13,7 @@ var filestackKey = keys.filestack;
       // const apikey = keys.filestack;
 
       // using local file
-      const apikey = filestackKey;
+      const apikey = filestackKey.key;
 
       const client = filestack.init(apikey);
 
