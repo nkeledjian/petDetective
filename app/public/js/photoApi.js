@@ -6,16 +6,16 @@
 var keys = require("../../../keys");
 
 // using local file
-// var filestackKey = keys.filestack;
+var filestackKey = keys.filestack;
 
     window.addEventListener('DOMContentLoaded', function () {
       // ** using .env **
       // const apikey = keys.filestack;
 
       // using local file
-      // const apikey = filestackKey;
+      const apikey = filestackKey;
 
-      const client = filestack.init(filestack);
+      const client = filestack.init(apikey);
 
       const onProgress = (evt) => {
         document.getElementById('progress').innerHTML = `${evt.totalPercent}%`;
