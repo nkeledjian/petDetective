@@ -6,7 +6,7 @@
 // var keys = require("../../../keys");
 
 // using local file
-var filestackKey = keys.filestack;
+// var filestackKey = keys.filestack;
 
     window.addEventListener('DOMContentLoaded', function () {
       // ** using .env **
