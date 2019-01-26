@@ -1,20 +1,23 @@
 {
   "development": {
     "username": "root",
-    "password": "lakers123",
+    "password": "eshface",
     "database": "petDetective",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "",
+    "password": "eshface",
     "database": "petDetective",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
   },
   "production": {
+    "username": "iqqjeu4hplgnq52b",
+    "password": "i9yaligtif1fyycy",
+    "database": "casg3ku7xsuye3kq",
     "use_env_variable": "mysql://iqqjeu4hplgnq52b:i9yaligtif1fyycy@uoa25ublaow4obx5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/casg3ku7xsuye3kq",
     "dialect": "mysql"
   }
