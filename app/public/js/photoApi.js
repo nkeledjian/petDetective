@@ -3,7 +3,7 @@
 // ** .env variable setup **
 // require("dotenv").config();
 
-var keys = require("../../../keys");
+// var keys = require("../../../keys");
 
 // using local file
 var filestackKey = keys.filestack;
@@ -13,7 +13,7 @@ var filestackKey = keys.filestack;
       // const apikey = keys.filestack;
 
       // using local file
-      const apikey = filestackKey.key;
+      const apikey = process.env.filestack_KEY;
 
       const client = filestack.init(apikey);
 
