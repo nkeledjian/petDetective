@@ -1,5 +1,5 @@
 // import { filestack } from "../../../keys";
-
+// adding .env
 // ** .env variable setup **
 // require("dotenv").config();
 
