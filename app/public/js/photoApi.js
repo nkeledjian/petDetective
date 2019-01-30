@@ -9,12 +9,8 @@
 // var filestackKey = keys.filestack;
 
     window.addEventListener('DOMContentLoaded', function () {
-      // ** using .env **
-      // const apikey = keys.filestack;
-
-      // using local file
+      
       const apikey = process.env.filestack_KEY;
-
       const client = filestack.init(apikey);
 
       const onProgress = (evt) => {
