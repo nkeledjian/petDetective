@@ -1,9 +1,5 @@
-var filestackKey = keys.filestack;
-
     window.addEventListener('DOMContentLoaded', function () {
-      
-      const apikey = filestackKey.key;
-      const client = filestack.init(apikey);
+      const client = filestack.init('Ad0t5KOPCTraclmeKpdtqz');
 
       const onProgress = (evt) => {
         document.getElementById('progress').innerHTML = `${evt.totalPercent}%`;
