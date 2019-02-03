@@ -9,25 +9,24 @@ var db = require("../models");
 module.exports = function(app) {
   // Searches for Specific pet (or all pets), and then provides JSON
   app.get("/api/:pet?", function(req, res) {
-    // console.log('a')
-    // if (req.params.pet) {
-      console.log('b')
+    if (req.params.pet) {
+    
       // Display the JSON for ONLY that pet.
       // (Note how we're using the ORM here to run our searches)
       db.Pet.findAll({
-        // where: {
-        //   petType: req.params.pet,
-        // }
+        where: {
+          petType: req.params.pet,
+        }
       }).then(function(result) {
         // console.log('hereee',result);
 
         return res.json(result);
       });
-    // } else {
-    //   db.Pet.findAll().then(function(result) {
-    //     return res.json(result);
-    //   });
-    //}
+    } else {
+      db.Pet.findAll().then(function(result) {
+        return res.json(result);
+      });
+    }
   });
 
   // If a user sends data to add a new pet...
