@@ -14,9 +14,9 @@ module.exports = function(app) {
       // Display the JSON for ONLY that pet.
       // (Note how we're using the ORM here to run our searches)
       db.Pet.findAll({
-        where: {
-          petType: req.params.pet,
-        }
+        // where: {
+        //   petType: req.params.pet,
+        // }
       }).then(function(result) {
         // console.log('hereee',result);
 
