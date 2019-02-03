@@ -22,11 +22,12 @@ module.exports = function(app) {
 
         return res.json(result);
       });
-    } else {
-      db.Pet.findAll().then(function(result) {
-        return res.json(result);
-      });
-    }
+    } 
+    // else {
+    //   db.Pet.findAll().then(function(result) {
+    //     return res.json(result);
+    //   });
+    // }
   });
 
   // If a user sends data to add a new pet...
