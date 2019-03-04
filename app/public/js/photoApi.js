@@ -1,5 +1,5 @@
     window.addEventListener('DOMContentLoaded', function () {
-      const client = filestack.init('Ad0t5KOPCTraclmeKpdtqz');
+      const client = filestack.init('As89GrzRTzWOiRNEbUA7gz');
 
       const onProgress = (evt) => {
         document.getElementById('progress').innerHTML = `${evt.totalPercent}%`;
